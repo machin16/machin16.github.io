@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+}
+
+.menu{
+    width: 500px;
+    margin: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+.lista > li{
+    float: left;
+}
+
+.lista li a{
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+.lista li a:hover{
+    background-color: crimson;
+}
+
+
+.lista li ul{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+.lista li:hover > ul{
+    display: block;
+}
+
+.lista li ul li{
+    position: relative;
+}
+
+.fotos h1{
+    text-align: center;
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+.turismo{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.postal{
+    padding: 0 20px 20px;
+}
+
+img:hover{
+    opacity: .8;
+    transition: .1s;
+}
