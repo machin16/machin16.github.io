@@ -1,0 +1,154 @@
+html{
+    background-color: darkgray;
+}
+.fondo{
+    margin: 0;
+    padding: 0;
+    background: url(fondo.jpg);   
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+.menu{
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    margin: 0;
+}
+
+.menu li{
+    display: block;
+}
+
+.menu a{
+    color: rgb(211, 23, 48);
+    text-decoration: none;
+    display: block;
+    font-size: 50px;
+}
+
+.centro{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.men{
+    background-color: rgb(43, 77, 172);
+    text-align: center;
+    margin: 8px;
+}
+
+.men li{
+    display: inline-block;
+}
+
+.men a {
+    padding: 30px;
+    font-size: 28px;
+}
+
+.titulo1{
+    color: red;
+}
+
+.historia{
+    color: rgb(255, 177, 31);
+    text-align: justify;
+}
+
+.centro:hover{
+    transform:scale(0.9);
+}
+
+.comida{
+    font-size: 40px;
+    color: rgb(144, 248, 25);
+    text-align: justify;
+}
+
+.comida2{
+    color: rgb(216, 253, 6);
+    font-size: 14px;
+    margin: 10px;
+}
+
+.tonga{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.tonga2{
+    text-align: center;
+    color: yellow;
+}
+
+.cul1{
+    font-size: 40px;
+    color: darkkhaki;
+}
+
+.cul2{
+    color:chartreuse;
+    font-size: 18px;
+    margin: 8px;
+}
+
+.tura1{
+    width: 710px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tura2{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tura3{
+    color: aqua;
+    text-align: center;
+    font-size: 20px;
+}
+
+.tur{
+    color:rgb(229, 255, 0) ;
+    font-size: 50px ;
+}
+
+.l1{
+    font-size: 44px;
+    color: aquamarine;
+}
+
+.t1{
+    color: rgb(133, 216, 133);
+    font-size: 24px;
+}
+
+.vava1{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 15px;
+}
+
+.l2{
+    color: deeppink;
+    font-size: 37px;
+}
+
+.t2{
+    color: aliceblue;
+}
+
+.foto{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
