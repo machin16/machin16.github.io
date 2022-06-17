@@ -1,0 +1,70 @@
+html{
+    background-color:antiquewhite;
+}
+
+.titulo{
+    background-color: rgb(78, 216, 207);
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu{
+    background-color: darkgray;
+    text-align: center;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu a{
+    color: blue;
+    text-decoration: none;
+    padding: 25px;
+    display: block;
+}
+
+.lista > li a:hover{
+    background-color: rgb(130, 220, 238);
+    font-size: x-large;
+}
+
+.imagen img{
+    width: 350px;
+    height: 200px;
+}
+
+.parrafo{
+    text-align: justify;
+    margin: 25px;
+    font-size: medium;
+}
+
+.letra{
+    color:midnightblue;
+    text-align: left;
+    margin: 25px;
+}
+
+.subtema{
+    background-color:darkgray;
+    text-align: left;
+    margin: 15px;
+}
+
+.ejemplo{
+    color: red;
+    text-align: left;
+    margin: 25px;
+}
+
+footer{
+    font-size: 150%;
+    margin: auto;
+}
+
+footer img{
+    height: 3%;
+    width: 3%;
+}
