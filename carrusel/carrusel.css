@@ -1,0 +1,43 @@
+* { margin: 0;
+    background-color: rgb(239, 175, 152);
+}
+.contenedor{ 
+height: 100vh;
+display: flex;
+
+ /* los div internos esten centrados */
+align-items: center;
+}
+
+.VOLVER {
+    margin: 25px;
+    background-color: #2c1055;
+	color: white;
+	text-decoration: none;
+}
+
+.VOLVER:hover{
+    background-color: #223094
+}
+
+.lista{ 
+display: flex;
+overflow: hidden;
+padding: 30px 0;     
+}
+.flor{
+min-width: 300px;
+max-width: 300px;
+height: 200px;
+outline: 2px solid rgb(17, 17, 0);
+cursor: pointer;
+}
+
+img {
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+img:hover{
+transform: scale(1.2);
+}
