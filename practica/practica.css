@@ -1,0 +1,24 @@
+html{
+    background-color: bisque;
+}
+
+.title{
+    text-align: center;
+    color: coral;
+}
+
+.java{
+    text-align: center;
+    color: navy;
+}
+
+.VOLVER{
+    color: darkmagenta;
+    text-decoration: none;
+    font-size: large;
+    padding: 15px 25px;
+}
+
+.VOLVER:hover{
+    background-color: darkgrey;
+}
