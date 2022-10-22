@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Storage</title>
+</head>
+<body>
+    <h1>Fotgragia mia</h1>
+    <p>Estimado cliente: <br>
+    Aqui podras guardar cualquier foto,videos o archivos en nuestro hosting, por tiempo limitado</p>
+    <!--input:file " sirve para que puedan seleccionar el archvico y subirlo"-->
+    <input type="file" name="" id="file">
+    <button id="subir">SUBIR ARCHIVO</button>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+        import { getStorage ,ref, uploadBytes,deleteObject  } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-storage.js";//Copiamos el enlaze de arriba y cambiamos el "app" por "storage"
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        // Your web app's Firebase configuration
+
+        const firebaseConfig = {
+        apiKey: "AIzaSyDOAKGLq7m0-90rhY4482GwJ1x7QvkGw4Q",
+        authDomain: "usuarios-e7b92.firebaseapp.com",
+        projectId: "usuarios-e7b92",
+        storageBucket: "usuarios-e7b92.appspot.com",
+        messagingSenderId: "235862598425",
+        appId: "1:235862598425:web:ea20bd9fa1c84d0930db88"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const storage = getStorage(app);//Cambiamos el firebasApp  a un "app" nomas 
+
+        //Evento
+        document.getElementById("subir").addEventListener("click",function(){
+            var file= document.getElementById("file").files[0]//Coloamos "files [0]" Para que puedan cargar las fografias
+            const storage = getStorage();
+            const storageRef = ref(storage, 'uploadedimagene');// Lo cambiamos a uploadedimagene para que permita cargar la imagen
+
+            // 'file' comes from the Blob or File API
+            uploadBytes(storageRef, file).then((snapshot) => {
+            console.log('Uploaded a blob or file!');
+            });
+
+        })
+        
+
+
+    </script>
+
+</body>
+</html>
