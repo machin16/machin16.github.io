@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--JQUERY = Sirve para importar el codigo con los enlazes-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina = Sirve para utilizar todos los formatos de css y js-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Los iconos tipo Solid de Fontawesome = Sirve para colocar los iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/6.0.1/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <!--Enlazamos-->
+    <link rel="stylesheet" href="/MODELO/css/style.css">
+</head>
+<body>
+    <!--Contenedor / Centrado-->
+    <div class="modal-dialog text-center"><!--Sirve class "modal-digalog text-center (sive para que todo este centrado) " -->
+        <!--Sirve para Usar 3/4 de toda la pantalla-->
+        <div class="col-sm-8">
+            <!--Texto que aparecera-->
+            <div class="modal-content">
+                <!--Usar todo el espacio-->
+                <div class="col-12 user-img ">
+                    <img src="/MODELO/image/LOGIN.png" alt="div">
+                </div>
+                <form class="col-12">
+                    <!--Creamos los grupos para el input-->
+                    <div class="form-group" >
+                        <input type="email" class="form-control" id="user-group"  placeholder="Escriba su usuario">
+                    </div>
+                    <div class="form-group" >
+                        <input type="password" class="form-control" id="contraseña"    placeholder="Escriba su contraseña">
+                    </div>
+                    <button type="submit" class="btn btn-dark" id="registrar"> <i class="fa-duotone fa-arrow-right-to-arc"></i>Registrate</button>
+                </form>
+                <!--Que el boton ocupe el ancho total -->
+                <div class="col-12 forgot">
+                    <a href="#"> Recordar contraseña</a>
+                </div>
+                <div class="col-12 forgot">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<hr>
+
+    <div class="modal-dialog text-center"><!--Sirve class "modal-digalog text-center (sive para que todo este centrado) " -->
+        <!--Sirve para Usar 3/4 de toda la pantalla-->
+        <div class="col-sm-8">
+            <!--Texto que aparecera-->
+            <div class="modal-content">
+                <!--Usar todo el espacio-->
+                <div class="col-12 user-img ">
+                    <img src="/MODELO/image/LOGIN.png" alt="div">
+                </div>
+                <form class="col-12">
+                    <!--Creamos los grupos para el input-->
+                    <div class="form-group" >
+                        <input type="text" class="form-control" id="correo1"    placeholder="Escriba su usuario">
+                    </div>
+                    <div class="form-group" >
+                        <input type="password" class="form-control" id="contraseña1"    placeholder="Escriba su contraseña">
+                    </div>
+                    <button type="submit" class="btn btn-dark" id="ingresar" > <i class="fa-solid fa-arrow-right-to-bracket"></i>INGRESAR</button>
+                </form>
+                <!--Que el boton ocupe el ancho total -->
+                <div class="col-12 forgot">
+                    <a href="#"></a>
+                </div>
+                <div class="col-12 forgot">
+                    <a href="/Proyectofinal/cuenta.html"> Registrate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+        //Importando el acceso para crear cuenta y contraseña
+        //Primera manera de realizarlo
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js";
+        //Segunda manera de realizarlo
+        //import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDOAKGLq7m0-90rhY4482GwJ1x7QvkGw4Q",
+            authDomain: "usuarios-e7b92.firebaseapp.com",
+            projectId: "usuarios-e7b92",
+            storageBucket: "usuarios-e7b92.appspot.com",
+            messagingSenderId: "235862598425",
+            appId: "1:235862598425:web:ea20bd9fa1c84d0930db88"
+        };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        // Inicializamos la autenticacion//Es necesario colocar "app"
+        const auth = getAuth(app);
+
+        // Creamos el boton click al activar el boton ingresar
+        document.getElementById("registrar").addEventListener("click",function(){
+            // Generamos constante para tomar los datos 
+            const email = document.getElementById("user-group").value
+            const password= document.getElementById("contraseña").value
+        
+    
+            // Copio el acceso de los elementos 
+            createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                console.log("Cuenta Creada...")
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+                console.log(errorCode + errorMessage)
+            });
+
+        })
+
+        //Crearemos un evento para el boton iniciar
+        document.getElementById("ingresar").addEventListener("click",function(){  //Llamomos a las variablas "ide" con document.
+            const email1= document.getElementById("correo1").value;
+            const password1= document.getElementById("contraseña1").value;
+            window.open("bienvenido.html","_self")
+            //Copiamos de la const para abajo
+            signInWithEmailAndPassword(auth, email1, password1)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                //Sirve para que me diriga a la otra pagina  //Self sirve para ue cuando habra una pagina se habra en la misma pestaña
+                //console.log("Ya puedes ingresar a la nueva pagina")
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log("Tu cuenta no existe...")
+            });
+
+
+        })
+
+
+
+    </script>
+
+</body>
+</html>
