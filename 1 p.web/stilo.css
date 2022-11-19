@@ -1,0 +1,58 @@
+body{
+    margin: 20px;
+    background: #08908e;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header{
+    background: #4B74AA;
+    color: lightcoral;
+    text-align: center;
+
+}
+
+header h1{
+    color: burlywood;
+    text-align: center;
+    font-size: 400%;
+}
+
+nav ul{
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+nav ul li{
+    border: 1px solid rgb(0, 255, 238);
+}
+
+nav ul li a{
+    display: block;
+    padding: 6px 15px;
+    background: rgb(63, 103, 213);
+    color: black;
+    text-decoration:none ;
+}
+
+.boton1 img{
+    height: 2%;
+    width: 2%;
+    
+
+}
+
+.boton3 img{
+    height: 2%;
+    width: 2%;
+    
+}
+
+.trakata img:hover{
+    transform: scale(5.2);
+    
+}

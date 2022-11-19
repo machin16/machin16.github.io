@@ -1,0 +1,101 @@
+*{ margin: 0;
+    background-color: rgb(101, 192, 190);
+
+}
+
+.titulo{
+    background-color: grey;
+    text-align: center;
+    text-decoration: dashed;
+    margin: 25px;
+    color: black;
+    font-size: 480%;
+}
+
+
+
+.menu li{
+    display:inline-block;
+    text-align: justify;
+}
+
+
+.menu a{
+    background-color: rgb(196, 207, 207);
+    color: black;
+    text-decoration: none;
+    font-size: large  ;
+    padding: 20px;
+    display: block;
+    margin: 55px;
+}
+
+.portada{
+    height: 300px;
+    width: 600px;
+    align-items: center;
+    margin: auto;
+}
+
+.par1{
+    font-size: x-large;
+    color: black;
+    text-align: center;
+}
+
+.contenedor{ 
+height: 100vh;
+display: flex;
+
+ /* los div internos esten centrados */
+align-items: center;
+}
+
+.VOLVER {
+    margin: 25px;
+    background-color: #b4224b;
+	color: white;
+	text-decoration: none;
+}
+
+.VOLVER:hover{
+    background-color: #223094
+}
+
+.lista{ 
+display: flex;
+overflow: hidden;
+padding: 30px 0;     
+}
+.flor{
+min-width: 300px;
+max-width: 300px;
+height: 200px;
+outline: 2px solid rgb(17, 17, 0);
+cursor: pointer;
+}
+
+img {
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+img:hover{
+transform: scale(1.2);
+}
+
+footer{
+    background-color: azure;
+    text-align: center;
+    margin: auto;
+}
+
+footer img{
+    background-color: azure;
+    display: inline;
+    height: 4%;
+    width: 4%;
+}
+.pie{
+    background-color: antiquewhite;
+}
